@@ -1,0 +1,15 @@
+html {
+    font-family: GillSans, Calibri, Trebuchet, sans-serif;
+}
+
+#search {
+    margin-bottom: 80px;
+}
+
+#buttons {
+    padding-top: 27px;
+}
+
+.vertical-center {
+    vertical-align: middle;
+}
