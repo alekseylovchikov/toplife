@@ -5,5 +5,5 @@
 For access:
 --------------
 
-**username: svdmusic**
-**password: opensesame**
+**username:** svdmusic
+**password:** opensesame
