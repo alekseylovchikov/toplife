@@ -94,6 +94,7 @@ entry.add = function(name, url, text) {
                     $('#success_add').animate({
                         opacity: 0
                     }, animateTime);
+
                     setTimeout(function() {
                         $('#success_add').remove();
                     }, animateTime);
@@ -247,6 +248,9 @@ $('#login_form').submit(function(e) {
         password = $.trim(password);
 
     if(username !== "" && password !== "") {
+        var errorMessage = $('#login_error_message');
+        var message = '<h4 class="alert alert-danger text-center error_login">Доступ закрыт!</h4>';
+
         $.ajax({
             url: "get.php",
             type: "POST",
@@ -257,16 +261,19 @@ $('#login_form').submit(function(e) {
             },
             success: function(data) {
                 if(data === "error") {
-                    var errorMessage = $('#login_error_message');
-
                     errorMessage.show();
 
-                    errorMessage.animate({
+                    errorMessage.append(message);
+
+                    var errorMsg = $('.error_login');
+
+                    errorMsg.animate({
                         opacity: 0
                     }, animateTime);
 
                     setTimeout(function() {
                         errorMessage.hide();
+                        errorMsg.remove();
                     }, animateTime);
                 } else {
                     location.reload();

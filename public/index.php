@@ -246,9 +246,7 @@ $entry = new Entry();
                             Hello, username!
                         <?php } else { ?>
                             <!-- begin for errors login -->
-                            <div id="login_error_message" style="display: none;">
-                                <h4 class="alert alert-danger text-center">Доступ закрыт!</h4>
-                            </div>
+                            <div id="login_error_message" style="display: none;"></div>
                             <!-- end for errors login -->
                             <form id="login_form" style="width: 300px; margin: auto;" action="index.php" method="post">
                                 <p><input class="form-control" type="text" name="username" id="username" placeholder="Логин" /></p>
